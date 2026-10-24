@@ -1,0 +1,269 @@
+
+/* Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #34252a;
+    background-color: #fffaf9;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #ffffff;
+    padding: 18px 8%;
+    box-shadow: 0 2px 10px #0000000d;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #b75d7d;
+    font-family: Georgia, serif;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #34252a;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #c56b8d;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 65px 8%;
+    background: linear-gradient(135deg, #fbe5e9, #f8d3d7);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-title {
+    color: #b75d7d;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero-text > p:not(.small-title) {
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Buttons */
+.btn,
+.product-btn {
+    display: inline-block;
+    background-color: #b75d7d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.product-btn:hover {
+    background-color: #873d5a;
+    transform: translateY(-2px);
+}
+
+/* Shop Section */
+.shop {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.shop h2,
+.about h2,
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+}
+
+.section-description {
+    color: #88777c;
+    margin: 8px 0 30px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px #6d374012;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px #6d374020;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin-top: 12px;
+}
+
+.product-card p {
+    color: #88777c;
+    font-size: 14px;
+}
+
+.product-card h4 {
+    color: #b75d7d;
+    margin: 10px 0 15px;
+}
+
+.product-btn {
+    width: 100%;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 60px 8%;
+    background-color: #f8eeee;
+}
+
+.about > div {
+    flex: 1;
+}
+
+.about img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-text h2 {
+    margin: 12px 0;
+}
+
+.about-text > p:not(.small-title) {
+    margin-bottom: 22px;
+    color: #6f5b61;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact p {
+    margin: 12px 0 22px;
+    color: #88777c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #34252a;
+    color: white;
+    padding: 30px 15px;
+}
+
+footer h2 {
+    color: #f2b4ca;
+    font-family: Georgia, serif;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero,
+    .about {
+        flex-direction: column;
+        padding: 40px 6%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-image img,
+    .about img {
+        height: 280px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .shop h2,
+    .about h2,
+    .contact h2 {
+        font-size: 27px;
+    }
+}
